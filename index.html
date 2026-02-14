@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Happy Birthday 😋🥳🎂</title>
+<title>Happy Birthday 🎂</title>
 <style>
 body {
   margin: 0;
@@ -49,31 +49,31 @@ button:hover {
   background: yellow;
 }
 
+/* الرسالة بعد ما الكل يختفي */
 .message {
   display: none;
-  font-size: 24px;
-  color: black;
+  font-size: 30px;
+  color: white;
   text-align: center;
   animation: fadeIn 2s forwards;
 }
+
+/* أنيميشن الرسالة */
 @keyframes fadeIn {
-  0% {opacity: 0; transform: scale(0.5)
-rotate(-10deg); }
-  50% {opacity: 0.5; transform:
-scale(1.2) rotate(5deg); }
-  100% {opacity: 1; transform; scale(1)
-rotate(0deg); }
+  0% { opacity: 0; transform: scale(0.5) rotate(-10deg); }
+  50% { opacity: 0.5; transform: scale(1.2) rotate(5deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
 }
 </style>
 </head>
 
 <body>
-<div class="container">
+<div class="container" id="container">
   <h1>Happy Birthday 🎉</h1>
   <div class="cake">🎂</div>
   <button id="btn">Click here 🎁</button>
   <div class="message" id="msg">
-    Happy Birthday to you no body likes you, you look like MONKEY go back to the ZOO 🥳🎉
+    Happy Birthday to You! 💛🎂🥳
   </div>
 </div>
 
@@ -83,8 +83,10 @@ const message = document.getElementById("msg");
 const container = document.getElementById("container");
 
 button.addEventListener("click", () => {
-el => el.style.display = "none");
+  // نخفي كل محتوى الكونتينر الأول
+  container.querySelectorAll("*").forEach(el => el.style.display = "none");
   
+  // نعرض الرسالة بس
   message.style.display = "block";
 });
 </script>
