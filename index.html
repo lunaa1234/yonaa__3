@@ -52,7 +52,17 @@ button:hover {
 .message {
   display: none;
   font-size: 24px;
-  margin-top: 20px;
+  color: black;
+  text-align: center;
+  animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+  0% {opacity: 0; transform: scale(0.5)
+rotate(-10deg); }
+  50% {opacity: 0.5; transform:
+scale(1.2) rotate(5deg); }
+  100% {opacity: 1; transform; scale(1)
+rotate(0deg); }
 }
 </style>
 </head>
@@ -70,8 +80,11 @@ button:hover {
 <script>
 const button = document.getElementById("btn");
 const message = document.getElementById("msg");
+const container = document.getElementById("container");
 
 button.addEventListener("click", () => {
+el => el.style.display = "none");
+  
   message.style.display = "block";
 });
 </script>
