@@ -53,7 +53,7 @@ button:hover {
 .message {
   display: none;
   font-size: 30px;
-  color: white;
+  color: black;
   text-align: center;
   animation: fadeIn 2s forwards;
 }
@@ -72,9 +72,11 @@ button:hover {
   <h1>Happy Birthday 🎉</h1>
   <div class="cake">🎂</div>
   <button id="btn">Click here 🎁</button>
-  <div class="message" id="msg">
-    Happy Birthday to You! 💛🎂🥳
-  </div>
+</div>
+
+<!-- الرسالة برا الكونتينر -->
+<div class="message" id="msg">
+  Happy Birthday to You no body likes you, you look like MONKEY do back to the ZOO 🥳🎉
 </div>
 
 <script>
@@ -83,8 +85,8 @@ const message = document.getElementById("msg");
 const container = document.getElementById("container");
 
 button.addEventListener("click", () => {
-  // نخفي كل محتوى الكونتينر الأول
-  container.querySelectorAll("*").forEach(el => el.style.display = "none");
+  // نخفي كل محتوى الكونتينر
+  container.style.display = "none";
   
   // نعرض الرسالة بس
   message.style.display = "block";
