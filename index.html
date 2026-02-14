@@ -41,17 +41,16 @@
     <div class="container">
       <h1>Happy Birthday🎂🎉</h1>
       <div class="cake">🎂</div>
-      <button onclick="showMessage()">Click here 🎁</button>
+      <button id="btn">Click here 🎁</button>
       <div class="message" id="msg">
         Happy Birthday to you no body likes you you look like MONKEY go back to the ZOO 🥳🎂🐵
       </div>
     </div>
     <script>
-      function showMessage() {
-        docunent.getELementBYId("msg").style.dis
-        play = "block";
-      }
+     document.getELementBYId("btn").addEventL istener("click", function() {
+       
+    docunent.getELementBYId("msg").style.dis play = "block";
+     });
     </script>
-        
   </body>
 </html>
